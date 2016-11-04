@@ -3,7 +3,7 @@ var app = angular.module("sockets",[]);
 app.controller("socketsController",function($scope){
 	$scope.arduino_elems = [];
 
-	var socket = io.connect('http://localhost:3001');
+	var socket = io.connect('http://dashboardiotkvvn.azurewebsites.net/');
 	//Escucha al evento 'client' que sera llamado desde el servidor web
     //que envia los datos de sensores del arduino
 	socket.on('client', function(arduino) { 
